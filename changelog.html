@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's New - Pandith AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0F172A;
+      --card: #1E293B;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --primary: #38BDF8;
+      --primary-glow: rgba(56, 189, 248, 0.15);
+      --accent: #10B981;
+      --accent-glow: rgba(16, 185, 129, 0.15);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px 60px 16px;
+    }
+    .nav-bar {
+      max-width: 800px;
+      margin: 20px auto 40px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+    }
+    .brand {
+      font-weight: 800;
+      font-size: 1.25rem;
+      background: linear-gradient(135deg, #38BDF8, #818CF8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-left: 16px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+    .nav-links a.active, .nav-links a:hover {
+      color: var(--primary);
+      background: var(--primary-glow);
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .page-title {
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .page-title h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .page-title p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-top: 6px;
+    }
+    .release-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+    .release-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 14px;
+    }
+    .version-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .version-number {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .badge {
+      background: var(--accent-glow);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .release-date {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .section-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #E2E8F0;
+      margin: 16px 0 8px 0;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    li {
+      color: #CBD5E1;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    @media (max-width: 600px) {
+      .release-card { padding: 22px 18px; }
+      .release-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .nav-bar { flex-direction: column; gap: 12px; }
+      .nav-links a { margin: 0 6px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <a href="privacy.html" class="brand">Pandith AI</a>
+    <div class="nav-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="changelog.html" class="active">What's New</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-title">
+      <h1>What's New in Pandith</h1>
+      <p>Stay updated with our latest releases, AI improvements, and feature updates.</p>
+    </div>
+
+    <!-- Latest Release: Version 1.0.0 -->
+    <div class="release-card">
+      <div class="release-header">
+        <div class="version-tag">
+          <span class="version-number">v1.0.0</span>
+          <span class="badge">Official Launch</span>
+        </div>
+        <span class="release-date">November 2026</span>
+      </div>
+
+      <div class="section-title">✨ Key Highlights</div>
+      <ul>
+        <li><strong>Live AI English Coach:</strong> Real-time interactive voice conversations with native accent mirroring, interactive turn-by-turn guidance, and instant conversational feedback.</li>
+        <li><strong>Live Voice Interpreter:</strong> Simultaneous bidirectional speech-to-speech translation between Sinhala and English powered by Google's dedicated live translation models.</li>
+        <li><strong>Instant 0ms Listen & Replay:</strong> Re-listen to translated phrases instantly with high-definition Gemini Text-to-Speech (TTS).</li>
+        <li><strong>Saved Phrases Vault:</strong> One-tap bookmarking to curate your personal English fluency library for on-the-go review.</li>
+        <li><strong>Clean Hero Portrait UI:</strong> Tinder-style swipeable card interface with real-time breathing aura volume response.</li>
+      </ul>
+
+      <div class="section-title">⚡ Performance & Security</div>
+      <ul>
+        <li>Ultra-low latency streaming over bidirectional WebSockets (WSS).</li>
+        <li>Zero audio recording persistence on advertising servers to protect privacy.</li>
+        <li>Defensive lifecycle management prevents background memory leaks and crashes.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2026 Pandith AI. All rights reserved.
+  </footer>
+
+</body>
+</html>
