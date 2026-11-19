@@ -3,195 +3,208 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What's New - Pandith AI</title>
+  <title>What's New - Pandith</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0F172A;
-      --card: #1E293B;
-      --card-border: rgba(255, 255, 255, 0.08);
-      --text: #F8FAFC;
-      --text-muted: #94A3B8;
-      --primary: #38BDF8;
-      --primary-glow: rgba(56, 189, 248, 0.15);
-      --accent: #10B981;
-      --accent-glow: rgba(16, 185, 129, 0.15);
+      --bg: #111318;
+      --surface: #1D2024;
+      --surface-subtle: #282A2F;
+      --surface-elevated: #33353A;
+      --primary: #10B981;
+      --primary-tint: #142B20;
+      --primary-tint-text: #6EE7B7;
+      --text-primary: #E2E2E9;
+      --text-secondary: #C4C7C5;
+      --text-muted: #8E918F;
+      --divider: #2A2D32;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-primary);
       line-height: 1.7;
-      padding: 0 16px 60px 16px;
+      padding: 16px;
+      -webkit-font-smoothing: antialiased;
     }
-    .nav-bar {
-      max-width: 800px;
-      margin: 20px auto 40px auto;
+    .app-bar {
+      max-width: 760px;
+      margin: 12px auto 20px auto;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 12px 20px;
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
+      justify-content: space-between;
     }
-    .brand {
-      font-weight: 800;
-      font-size: 1.25rem;
-      background: linear-gradient(135deg, #38BDF8, #818CF8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-decoration: none;
-    }
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-left: 16px;
-      padding: 6px 12px;
-      border-radius: 8px;
-      transition: all 0.2s;
-    }
-    .nav-links a.active, .nav-links a:hover {
+    .brand-title {
+      font-size: 1.4rem;
+      font-weight: 900;
       color: var(--primary);
-      background: var(--primary-glow);
+      text-decoration: none;
+      letter-spacing: -0.3px;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
+    .segmented-nav {
+      display: flex;
+      background-color: var(--surface);
+      border-radius: 9999px;
+      padding: 4px;
+      gap: 2px;
     }
-    .page-title {
-      margin-bottom: 32px;
-      text-align: center;
-    }
-    .page-title h1 {
-      font-size: 2.2rem;
+    .nav-pill {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
       font-weight: 800;
-      letter-spacing: -0.5px;
-    }
-    .page-title p {
       color: var(--text-muted);
-      font-size: 1rem;
-      margin-top: 6px;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .nav-pill.active {
+      background-color: var(--surface-subtle);
+      color: var(--primary);
+    }
+    .nav-pill:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+    .main-wrap {
+      max-width: 760px;
+      margin: 0 auto 40px auto;
+    }
+    .page-header {
+      margin-bottom: 24px;
+    }
+    .page-header h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.4px;
+      margin-bottom: 4px;
+      color: var(--text-primary);
+    }
+    .page-header p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 0;
     }
     .release-card {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 32px;
-      margin-bottom: 24px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+      background-color: var(--surface);
+      border-radius: 28px;
+      padding: 32px 28px;
+      margin-bottom: 20px;
     }
-    .release-header {
+    .release-top {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 18px;
-      border-bottom: 1px solid var(--card-border);
-      padding-bottom: 14px;
+      margin-bottom: 16px;
     }
-    .version-tag {
-      display: inline-flex;
+    .version-group {
+      display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
-    .version-number {
-      font-size: 1.35rem;
-      font-weight: 800;
+    .version-title {
+      font-size: 1.4rem;
+      font-weight: 900;
       color: var(--primary);
     }
-    .badge {
-      background: var(--accent-glow);
-      color: var(--accent);
+    .m3-tag {
+      background-color: var(--primary-tint);
+      color: var(--primary-tint-text);
       font-size: 0.75rem;
       font-weight: 800;
-      padding: 3px 10px;
-      border-radius: 20px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      letter-spacing: 0.4px;
     }
     .release-date {
       color: var(--text-muted);
       font-size: 0.85rem;
-      font-weight: 600;
-    }
-    .section-title {
-      font-size: 1rem;
       font-weight: 700;
-      color: #E2E8F0;
-      margin: 16px 0 8px 0;
+    }
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 18px 0 8px 0;
     }
     ul {
       padding-left: 20px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
     li {
-      color: #CBD5E1;
+      color: var(--text-secondary);
       font-size: 0.95rem;
+      font-weight: 600;
       margin-bottom: 6px;
+    }
+    strong {
+      color: var(--text-primary);
+      font-weight: 800;
     }
     footer {
       text-align: center;
-      margin-top: 40px;
+      margin: 30px 0 40px 0;
       color: var(--text-muted);
       font-size: 0.85rem;
+      font-weight: 600;
     }
     @media (max-width: 600px) {
-      .release-card { padding: 22px 18px; }
-      .release-header { flex-direction: column; align-items: flex-start; gap: 8px; }
-      .nav-bar { flex-direction: column; gap: 12px; }
-      .nav-links a { margin: 0 6px; }
+      .release-card { padding: 22px 18px; border-radius: 22px; }
+      .app-bar { flex-direction: column; gap: 12px; align-items: flex-start; }
+      .release-top { flex-direction: column; align-items: flex-start; gap: 6px; }
     }
   </style>
 </head>
 <body>
 
-  <nav class="nav-bar">
-    <a href="privacy.html" class="brand">Pandith AI</a>
-    <div class="nav-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="changelog.html" class="active">What's New</a>
+  <nav class="app-bar">
+    <a href="privacy.html" class="brand-title">Pandith</a>
+    <div class="segmented-nav">
+      <a href="privacy.html" class="nav-pill">Privacy</a>
+      <a href="terms.html" class="nav-pill">Terms</a>
+      <a href="changelog.html" class="nav-pill active">What's New</a>
     </div>
   </nav>
 
-  <div class="container">
-    <div class="page-title">
-      <h1>What's New in Pandith</h1>
-      <p>Stay updated with our latest releases, AI improvements, and feature updates.</p>
-    </div>
+  <div class="main-wrap">
+    <header class="page-header">
+      <h1>What's New</h1>
+      <p>Latest release notes, updates, and improvements to Pandith.</p>
+    </header>
 
-    <!-- Latest Release: Version 1.0.0 -->
-    <div class="release-card">
-      <div class="release-header">
-        <div class="version-tag">
-          <span class="version-number">v1.0.0</span>
-          <span class="badge">Official Launch</span>
+    <!-- Version 1.0.0 -->
+    <article class="release-card">
+      <div class="release-top">
+        <div class="version-group">
+          <span class="version-title">v1.0.0</span>
+          <span class="m3-tag">Official Launch</span>
         </div>
         <span class="release-date">November 2026</span>
       </div>
 
-      <div class="section-title">✨ Key Highlights</div>
+      <h3>Spoken English Live Coach</h3>
       <ul>
-        <li><strong>Live AI English Coach:</strong> Real-time interactive voice conversations with native accent mirroring, interactive turn-by-turn guidance, and instant conversational feedback.</li>
-        <li><strong>Live Voice Interpreter:</strong> Simultaneous bidirectional speech-to-speech translation between Sinhala and English powered by Google's dedicated live translation models.</li>
-        <li><strong>Instant 0ms Listen & Replay:</strong> Re-listen to translated phrases instantly with high-definition Gemini Text-to-Speech (TTS).</li>
-        <li><strong>Saved Phrases Vault:</strong> One-tap bookmarking to curate your personal English fluency library for on-the-go review.</li>
-        <li><strong>Clean Hero Portrait UI:</strong> Tinder-style swipeable card interface with real-time breathing aura volume response.</li>
+        <li><strong>Conversational AI Tutoring:</strong> Practice natural conversational English over real-time live calls powered by Gemini Multimodal Live API.</li>
+        <li><strong>Turn-by-Turn Audio:</strong> Low-latency native spoken voice responses with conversational flow.</li>
+        <li><strong>Grammar & Vocab Insights:</strong> Real-time corrective feedback cards to build spoken fluency.</li>
       </ul>
 
-      <div class="section-title">⚡ Performance & Security</div>
+      <h3>Simultaneous Live Interpreter</h3>
       <ul>
-        <li>Ultra-low latency streaming over bidirectional WebSockets (WSS).</li>
-        <li>Zero audio recording persistence on advertising servers to protect privacy.</li>
-        <li>Defensive lifecycle management prevents background memory leaks and crashes.</li>
+        <li><strong>Speech-to-Speech Translation:</strong> Instant bidirectional translation between Sinhala and English.</li>
+        <li><strong>Instant 0ms Listen:</strong> Replay any translated phrase with high-definition Gemini Text-to-Speech (TTS).</li>
+        <li><strong>Saved Phrases Vault:</strong> Bookmark your favorite phrases with one tap for daily vocabulary practice.</li>
       </ul>
-    </div>
 
+      <h3>Performance & Stability</h3>
+      <ul>
+        <li>Clean, flat Google Material 3 design with zero clutter.</li>
+        <li>Sub-second audio streaming over secure WebSockets (WSS).</li>
+        <li>Lightweight local storage with zero server voice persistence.</li>
+      </ul>
+    </article>
   </div>
 
   <footer>

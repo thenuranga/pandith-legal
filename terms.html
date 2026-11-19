@@ -3,188 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service - Pandith AI</title>
+  <title>Terms of Service - Pandith</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0F172A;
-      --card: #1E293B;
-      --card-border: rgba(255, 255, 255, 0.08);
-      --text: #F8FAFC;
-      --text-muted: #94A3B8;
-      --primary: #38BDF8;
-      --primary-glow: rgba(56, 189, 248, 0.15);
-      --warning: #F59E0B;
-      --warning-glow: rgba(245, 158, 11, 0.15);
+      --bg: #111318;
+      --surface: #1D2024;
+      --surface-subtle: #282A2F;
+      --surface-elevated: #33353A;
+      --primary: #10B981;
+      --warning-tint: #302812;
+      --warning-text: #FDE047;
+      --text-primary: #E2E2E9;
+      --text-secondary: #C4C7C5;
+      --text-muted: #8E918F;
+      --divider: #2A2D32;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-primary);
       line-height: 1.7;
-      padding: 0 16px 60px 16px;
+      padding: 16px;
+      -webkit-font-smoothing: antialiased;
     }
-    .nav-bar {
-      max-width: 800px;
-      margin: 20px auto 40px auto;
+    .app-bar {
+      max-width: 760px;
+      margin: 12px auto 20px auto;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 12px 20px;
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
+      justify-content: space-between;
     }
-    .brand {
-      font-weight: 800;
-      font-size: 1.25rem;
-      background: linear-gradient(135deg, #38BDF8, #818CF8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .brand-title {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--primary);
       text-decoration: none;
+      letter-spacing: -0.3px;
     }
-    .nav-links a {
+    .segmented-nav {
+      display: flex;
+      background-color: var(--surface);
+      border-radius: 9999px;
+      padding: 4px;
+      gap: 2px;
+    }
+    .nav-pill {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 800;
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-left: 16px;
-      padding: 6px 12px;
-      border-radius: 8px;
-      transition: all 0.2s;
+      transition: all 0.15s ease;
     }
-    .nav-links a.active, .nav-links a:hover {
+    .nav-pill.active {
+      background-color: var(--surface-subtle);
       color: var(--primary);
-      background: var(--primary-glow);
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: 40px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    .nav-pill:hover:not(.active) {
+      color: var(--text-secondary);
+    }
+    .card {
+      max-width: 760px;
+      margin: 0 auto 40px auto;
+      background-color: var(--surface);
+      border-radius: 28px;
+      padding: 36px 32px;
     }
     h1 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      margin-bottom: 8px;
-      letter-spacing: -0.5px;
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -0.4px;
+      margin-bottom: 6px;
+      color: var(--text-primary);
     }
-    .date {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 32px;
-      display: block;
-    }
-    h2 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin: 36px 0 12px 0;
-      border-bottom: 1px solid var(--card-border);
-      padding-bottom: 8px;
-    }
-    p, li {
-      color: #CBD5E1;
-      font-size: 1rem;
-      margin-bottom: 16px;
-    }
-    ul {
-      padding-left: 24px;
-      margin-bottom: 20px;
-    }
-    li { margin-bottom: 8px; }
-    .ai-disclaimer {
-      background: var(--warning-glow);
-      border-left: 4px solid var(--warning);
-      padding: 20px;
-      border-radius: 0 12px 12px 0;
-      margin: 28px 0;
-    }
-    .ai-disclaimer h3 {
-      color: var(--warning);
-      font-size: 1.1rem;
-      font-weight: 800;
-      margin-bottom: 8px;
-    }
-    .ai-disclaimer p { margin: 0; color: #FEF3C7; font-size: 0.95rem; }
-    footer {
-      text-align: center;
-      margin-top: 40px;
+    .effective-date {
       color: var(--text-muted);
       font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 28px;
+      display: block;
+    }
+    .m3-warning-box {
+      background-color: var(--warning-tint);
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-bottom: 28px;
+    }
+    .m3-warning-box h3 {
+      color: var(--warning-text);
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .m3-warning-box p {
+      color: #FEF08A;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 0;
+    }
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 32px 0 10px 0;
+    }
+    p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+    ul {
+      padding-left: 22px;
+      margin-bottom: 18px;
+    }
+    li {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    strong {
+      color: var(--text-primary);
+      font-weight: 800;
+    }
+    .divider {
+      height: 1px;
+      background-color: var(--divider);
+      margin: 28px 0;
+    }
+    footer {
+      text-align: center;
+      margin: 30px 0 40px 0;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
     }
     @media (max-width: 600px) {
-      .container { padding: 24px 18px; }
-      h1 { font-size: 1.75rem; }
-      .nav-bar { flex-direction: column; gap: 12px; }
-      .nav-links a { margin: 0 6px; }
+      .card { padding: 24px 20px; border-radius: 22px; }
+      h1 { font-size: 1.65rem; }
+      .app-bar { flex-direction: column; gap: 12px; align-items: flex-start; }
     }
   </style>
 </head>
 <body>
 
-  <nav class="nav-bar">
-    <a href="privacy.html" class="brand">Pandith AI</a>
-    <div class="nav-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html" class="active">Terms</a>
-      <a href="changelog.html">What's New</a>
+  <nav class="app-bar">
+    <a href="privacy.html" class="brand-title">Pandith</a>
+    <div class="segmented-nav">
+      <a href="privacy.html" class="nav-pill">Privacy</a>
+      <a href="terms.html" class="nav-pill active">Terms</a>
+      <a href="changelog.html" class="nav-pill">What's New</a>
     </div>
   </nav>
 
-  <div class="container">
+  <main class="card">
     <h1>Terms of Service</h1>
-    <span class="date">Effective Date: November 20, 2026 | Last Updated: November 20, 2026</span>
+    <span class="effective-date">Effective Date: November 20, 2026 | Last Updated: November 20, 2026</span>
 
-    <div class="ai-disclaimer">
-      <h3>⚠️ Essential AI Disclaimer & Limitation of Liability</h3>
-      <p>Pandith is an educational assistant powered by artificial intelligence (Google Gemini). While designed for natural fluency and high accuracy, AI-generated translations, spoken responses, and grammar corrections may occasionally contain inaccuracies, misinterpretations, or errors. Pandith is an educational aid and does not provide legally certified human translations. Pandith and its developers bear no liability for errors or outcomes resulting from AI output in academic exams, job interviews, legal proceedings, or official transactions.</p>
+    <div class="m3-warning-box">
+      <h3>AI Disclaimer & Limitation of Liability</h3>
+      <p>Pandith is an educational learning companion driven by artificial intelligence (Google Gemini). While built for natural fluency and high precision, AI-generated outputs, grammar advice, and spoken translations may occasionally be inaccurate or misinterpret colloquialisms. Pandith is designed for learning and practice purposes and does not represent legally certified human translation. The developer and Pandith bear no responsibility or liability for results arising from AI output in formal academic exams, interviews, legal matters, or commercial decisions.</p>
     </div>
 
-    <h2>1. Acceptance of Terms</h2>
-    <p>By downloading, installing, or using the <strong>Pandith</strong> application ("App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these terms, please do not use the application.</p>
+    <h2>1. Terms Acceptance</h2>
+    <p>By installing or using the <strong>Pandith</strong> application ("App"), you agree to abide by these Terms of Service. If you do not accept these terms, please discontinue using the App.</p>
 
-    <h2>2. Description of the Service</h2>
-    <p>Pandith provides spoken English tutoring, interactive live coaching, pronunciation shadowing, and real-time speech-to-speech translation tools to assist users in improving language proficiency.</p>
+    <div class="divider"></div>
 
-    <h2>3. User Responsibilities & Acceptable Use</h2>
+    <h2>2. Purpose of the Service</h2>
+    <p>Pandith provides conversational spoken English coaching, pronunciation practice, and real-time speech translation features to help users develop fluency through interactive practice.</p>
+
+    <div class="divider"></div>
+
+    <h2>3. Acceptable Use Policy</h2>
     <p>When using Pandith, you agree not to:</p>
     <ul>
-      <li>Transmit any abusive, offensive, defamatory, unlawful, or sexually explicit content through the voice or text channels.</li>
-      <li>Attempt to reverse-engineer, decompile, extract source code, or disrupt the network infrastructure of the App or its underlying AI models.</li>
-      <li>Abuse or overload server capacities through automated scripting, bot generation, or unauthorized API bypasses.</li>
-      <li>Use the service for fraudulent purposes or to misrepresent identity.</li>
+      <li>Transmit abusive, profane, harassing, or illegal content through voice or text input channels.</li>
+      <li>Attempt to reverse-engineer, decompile, extract algorithms, or tamper with the underlying app code or AI models.</li>
+      <li>Automate requests, deploy bots, or intentionally strain infrastructure and API capacity.</li>
     </ul>
 
-    <h2>4. Subscriptions, Minute Quotas & In-App Purchases</h2>
+    <div class="divider"></div>
+
+    <h2>4. Quotas, Minutes & Purchases</h2>
     <ul>
-      <li><strong>Free Trial Quotas:</strong> New accounts may receive complimentary trial minutes to evaluate live tutoring and translation. Complimentary minutes are subject to availability and fair use policies.</li>
-      <li><strong>Time-Based Passes & Top-Ups:</strong> Paid plans provide allocated conversational speaking time (minutes per day or monthly credit bundles). Time is consumed in real-time as speech sessions occur.</li>
-      <li><strong>Consumption & Refunds:</strong> Due to immediate high-performance cloud computing costs incurred during live AI sessions, consumed audio minutes and top-up bundles are non-refundable once utilized.</li>
+      <li><strong>Complimentary Trial Time:</strong> Eligible users may receive initial trial minutes to test the Live Call and Live Translate features.</li>
+      <li><strong>Time-Based Plans & Top-Ups:</strong> Paid packages grant conversational speaking time. Minutes count down in real-time as speaking sessions occur.</li>
+      <li><strong>Non-Refundable AI Compute:</strong> Because real-time AI compute resources are utilized immediately upon speaking, consumed minutes and top-up bundles cannot be refunded once used.</li>
     </ul>
+
+    <div class="divider"></div>
 
     <h2>5. Intellectual Property</h2>
-    <p>All software code, visual designs, brand assets, logos, and instructional content within Pandith remain the exclusive intellectual property of the Pandith development team. You are granted a personal, non-exclusive, non-transferable license to use the app for personal learning.</p>
+    <p>All app branding, graphic visual layouts, software code, and instructional designs are the exclusive property of Pandith. Users receive a personal license for non-commercial individual learning.</p>
 
-    <h2>6. Termination</h2>
-    <p>We reserve the right to suspend or terminate access to our service for any user who violates these Terms, abuses API quotas, or engages in harmful behavior, without prior notice.</p>
+    <div class="divider"></div>
 
-    <h2>7. Modifications to the Service</h2>
-    <p>We continuously enhance and optimize Pandith. We reserve the right to adjust features, update underlying AI model versions, or alter service availability to maintain performance and safety.</p>
-
-    <h2>8. Governing Law & Contact</h2>
-    <p>These terms shall be governed in accordance with the laws of Sri Lanka. For any questions or contractual inquiries regarding these Terms, please contact:</p>
+    <h2>6. Governing Law & Contact</h2>
+    <p>These Terms are governed under the laws of Sri Lanka. For contractual or support questions, please contact:</p>
     <ul>
       <li><strong>Email:</strong> support@pandith.lk (or pandith.app.help@gmail.com)</li>
-      <li><strong>Website:</strong> Pandith AI Official</li>
+      <li><strong>App:</strong> In-App Support form in Settings</li>
     </ul>
-  </div>
+  </main>
 
   <footer>
     &copy; 2026 Pandith AI. All rights reserved.
