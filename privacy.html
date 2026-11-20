@@ -9,17 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #111318;
-      --surface: #1D2024;
-      --surface-subtle: #282A2F;
-      --surface-elevated: #33353A;
-      --primary: #10B981;
-      --primary-tint: #142B20;
-      --primary-tint-text: #6EE7B7;
-      --text-primary: #E2E2E9;
-      --text-secondary: #C4C7C5;
-      --text-muted: #8E918F;
-      --divider: #2A2D32;
+      --bg: #121212;
+      --surface: #1E1E1E;
+      --surface-subtle: #2C2C2C;
+      --text-primary: #FFFFFF;
+      --text-secondary: #D4D4D4;
+      --text-muted: #888888;
+      --divider: #2C2C2C;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -38,9 +34,9 @@
       justify-content: space-between;
     }
     .brand-title {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 900;
-      color: var(--primary);
+      color: var(--text-primary);
       text-decoration: none;
       letter-spacing: -0.3px;
     }
@@ -62,7 +58,7 @@
     }
     .nav-pill.active {
       background-color: var(--surface-subtle);
-      color: var(--primary);
+      color: var(--text-primary);
     }
     .nav-pill:hover:not(.active) {
       color: var(--text-secondary);
@@ -71,7 +67,7 @@
       max-width: 760px;
       margin: 0 auto 40px auto;
       background-color: var(--surface);
-      border-radius: 28px;
+      border-radius: 24px;
       padding: 36px 32px;
     }
     h1 {
@@ -85,26 +81,26 @@
       color: var(--text-muted);
       font-size: 0.85rem;
       font-weight: 600;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       display: block;
     }
-    .m3-chip-box {
-      background-color: var(--primary-tint);
-      border-radius: 16px;
+    .callout-box {
+      background-color: var(--surface-subtle);
+      border-radius: 14px;
       padding: 16px 20px;
       margin-bottom: 28px;
     }
-    .m3-chip-box p {
-      color: var(--primary-tint-text);
+    .callout-box p {
+      color: var(--text-primary);
       font-size: 0.95rem;
       font-weight: 700;
       margin: 0;
     }
     h2 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 800;
-      color: var(--primary);
-      margin: 32px 0 10px 0;
+      color: var(--text-primary);
+      margin: 28px 0 10px 0;
     }
     p {
       color: var(--text-secondary);
@@ -129,7 +125,7 @@
     .divider {
       height: 1px;
       background-color: var(--divider);
-      margin: 28px 0;
+      margin: 24px 0;
     }
     footer {
       text-align: center;
@@ -139,7 +135,7 @@
       font-weight: 600;
     }
     @media (max-width: 600px) {
-      .card { padding: 24px 20px; border-radius: 22px; }
+      .card { padding: 24px 20px; border-radius: 20px; }
       h1 { font-size: 1.65rem; }
       .app-bar { flex-direction: column; gap: 12px; align-items: flex-start; }
     }
@@ -160,59 +156,59 @@
     <h1>Privacy Policy</h1>
     <span class="effective-date">Effective Date: November 20, 2026 | Last Updated: November 20, 2026</span>
 
-    <div class="m3-chip-box">
-      <p>Summary: Pandith captures audio via your microphone exclusively to provide spoken English coaching and instant translation. We never sell your voice recordings or share personal audio with third-party advertisers.</p>
+    <div class="callout-box">
+      <p>Summary: Pandith uses your microphone solely for spoken English coaching and instant translation. We never sell your voice recordings or share audio data with third-party advertisers.</p>
     </div>
 
     <h2>1. Overview</h2>
-    <p>Welcome to <strong>Pandith</strong> ("we", "our", or "us"). Pandith is an AI-powered spoken language companion designed to help learners achieve conversational English fluency through real-time AI live call tutoring and simultaneous speech translation.</p>
-    <p>This Privacy Policy describes how we collect, handle, and protect your information when you use the Pandith mobile app.</p>
+    <p>Welcome to <strong>Pandith</strong> ("we", "our", or "us"). Pandith is an AI-powered conversational language companion designed to help learners gain spoken English fluency through interactive live coaching and real-time speech translation.</p>
+    <p>This Privacy Policy explains how we collect, process, and protect your information when using the Pandith mobile application.</p>
 
     <div class="divider"></div>
 
     <h2>2. Information We Process</h2>
     <ul>
-      <li><strong>Voice and Audio Data:</strong> When actively using Live Call or Live Translate, Pandith streams PCM microphone audio chunks via encrypted WebSockets to process your speech and generate real-time voice feedback.</li>
-      <li><strong>Practice Subtitles:</strong> Transcriptions of spoken sentences are processed in memory to display subtitles, pronunciation notes, and translations on your screen.</li>
+      <li><strong>Voice and Audio Data:</strong> When actively using Live Call or Live Translate, Pandith captures microphone audio in short PCM chunks via secure WebSockets to process speech recognition and generate spoken responses.</li>
+      <li><strong>Practice Subtitles:</strong> Transcriptions of spoken utterances are processed in memory to display subtitles, corrections, and translations on your screen.</li>
       <li><strong>Saved Phrases Vault:</strong> Phrases you choose to bookmark are stored locally on your device storage (SharedPreferences) for off-line personal review.</li>
-      <li><strong>Account Credentials:</strong> If you sign in, your email address and profile identifiers are managed securely via Google Firebase Authentication.</li>
+      <li><strong>Account Credentials:</strong> If you sign in, your email address and authentication tokens are managed securely through Google Firebase Authentication.</li>
     </ul>
 
     <div class="divider"></div>
 
     <h2>3. How Audio Data Is Handled</h2>
-    <p>Pandith connects to Google Gemini Multimodal Live API services over secure Transport Layer Security (TLS/WSS):</p>
+    <p>Pandith communicates with generative AI services over encrypted Transport Layer Security (TLS/WSS):</p>
     <ul>
-      <li>Your voice audio is streamed transiently in volatile device memory only for the duration required to interpret speech.</li>
+      <li>Voice audio is streamed transiently in volatile device memory only for the duration required to process speech.</li>
       <li><strong>We do not permanently archive, retain, or store your voice audio on public servers or advertising trackers.</strong></li>
-      <li>Audio data is never used to construct advertising profiles or sell data to brokers.</li>
+      <li>Audio data is never used to build advertising profiles or sold to data brokers.</li>
     </ul>
 
     <div class="divider"></div>
 
     <h2>4. Third-Party Services</h2>
-    <p>Pandith uses trusted infrastructure to deliver high-quality language tutoring:</p>
+    <p>Pandith utilizes trusted infrastructure to run tutoring and speech features:</p>
     <ul>
-      <li><strong>Google Cloud & Gemini AI:</strong> Performs speech-to-speech AI processing under enterprise Google Cloud confidentiality standards.</li>
-      <li><strong>Google Firebase:</strong> Manages secure user authentication and crash analytics.</li>
+      <li><strong>Google Cloud & Gemini AI:</strong> Performs real-time speech processing and natural language generation under Google Cloud enterprise terms.</li>
+      <li><strong>Google Firebase:</strong> Manages secure user authentication and crash telemetry.</li>
     </ul>
 
     <div class="divider"></div>
 
     <h2>5. Data Retention & Account Deletion</h2>
-    <p>You maintain full ownership of your data at all times:</p>
+    <p>You maintain full control of your personal data at all times:</p>
     <ul>
       <li><strong>Local Data:</strong> Clear your translation history and saved phrases vault anytime from inside the app.</li>
-      <li><strong>Account Deletion:</strong> You can permanently delete your account and associated profile data anytime by tapping <strong>Settings &gt; Delete Account</strong> in the app, or by contacting us.</li>
+      <li><strong>Account Deletion:</strong> You can permanently delete your account and profile data anytime by tapping <strong>Settings &gt; Delete Account</strong> in the app, or by contacting our support team.</li>
     </ul>
 
     <div class="divider"></div>
 
     <h2>6. Contact Us</h2>
-    <p>For any privacy inquiries or assistance regarding Pandith, reach out to us:</p>
+    <p>For any privacy questions or requests regarding Pandith, please contact us:</p>
     <ul>
       <li><strong>Email:</strong> support@pandith.lk (or pandith.app.help@gmail.com)</li>
-      <li><strong>In-App:</strong> Feedback / Contact Us form in Settings</li>
+      <li><strong>In-App:</strong> Contact Us form in Settings</li>
     </ul>
   </main>
 

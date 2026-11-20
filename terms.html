@@ -9,17 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #111318;
-      --surface: #1D2024;
-      --surface-subtle: #282A2F;
-      --surface-elevated: #33353A;
-      --primary: #10B981;
-      --warning-tint: #302812;
-      --warning-text: #FDE047;
-      --text-primary: #E2E2E9;
-      --text-secondary: #C4C7C5;
-      --text-muted: #8E918F;
-      --divider: #2A2D32;
+      --bg: #121212;
+      --surface: #1E1E1E;
+      --surface-subtle: #2C2C2C;
+      --text-primary: #FFFFFF;
+      --text-secondary: #D4D4D4;
+      --text-muted: #888888;
+      --divider: #2C2C2C;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -38,9 +34,9 @@
       justify-content: space-between;
     }
     .brand-title {
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       font-weight: 900;
-      color: var(--primary);
+      color: var(--text-primary);
       text-decoration: none;
       letter-spacing: -0.3px;
     }
@@ -62,7 +58,7 @@
     }
     .nav-pill.active {
       background-color: var(--surface-subtle);
-      color: var(--primary);
+      color: var(--text-primary);
     }
     .nav-pill:hover:not(.active) {
       color: var(--text-secondary);
@@ -71,7 +67,7 @@
       max-width: 760px;
       margin: 0 auto 40px auto;
       background-color: var(--surface);
-      border-radius: 28px;
+      border-radius: 24px;
       padding: 36px 32px;
     }
     h1 {
@@ -85,32 +81,32 @@
       color: var(--text-muted);
       font-size: 0.85rem;
       font-weight: 600;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       display: block;
     }
-    .m3-warning-box {
-      background-color: var(--warning-tint);
-      border-radius: 16px;
+    .callout-box {
+      background-color: var(--surface-subtle);
+      border-radius: 14px;
       padding: 18px 20px;
       margin-bottom: 28px;
     }
-    .m3-warning-box h3 {
-      color: var(--warning-text);
+    .callout-box h3 {
+      color: var(--text-primary);
       font-size: 1rem;
       font-weight: 800;
       margin-bottom: 6px;
     }
-    .m3-warning-box p {
-      color: #FEF08A;
+    .callout-box p {
+      color: var(--text-secondary);
       font-size: 0.95rem;
       font-weight: 600;
       margin: 0;
     }
     h2 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 800;
-      color: var(--primary);
-      margin: 32px 0 10px 0;
+      color: var(--text-primary);
+      margin: 28px 0 10px 0;
     }
     p {
       color: var(--text-secondary);
@@ -135,7 +131,7 @@
     .divider {
       height: 1px;
       background-color: var(--divider);
-      margin: 28px 0;
+      margin: 24px 0;
     }
     footer {
       text-align: center;
@@ -145,7 +141,7 @@
       font-weight: 600;
     }
     @media (max-width: 600px) {
-      .card { padding: 24px 20px; border-radius: 22px; }
+      .card { padding: 24px 20px; border-radius: 20px; }
       h1 { font-size: 1.65rem; }
       .app-bar { flex-direction: column; gap: 12px; align-items: flex-start; }
     }
@@ -166,7 +162,7 @@
     <h1>Terms of Service</h1>
     <span class="effective-date">Effective Date: November 20, 2026 | Last Updated: November 20, 2026</span>
 
-    <div class="m3-warning-box">
+    <div class="callout-box">
       <h3>AI Disclaimer & Limitation of Liability</h3>
       <p>Pandith is an educational learning companion driven by artificial intelligence (Google Gemini). While built for natural fluency and high precision, AI-generated outputs, grammar advice, and spoken translations may occasionally be inaccurate or misinterpret colloquialisms. Pandith is designed for learning and practice purposes and does not represent legally certified human translation. The developer and Pandith bear no responsibility or liability for results arising from AI output in formal academic exams, interviews, legal matters, or commercial decisions.</p>
     </div>
